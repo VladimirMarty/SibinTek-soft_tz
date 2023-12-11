@@ -31,9 +31,9 @@ function CurrencyConverter() {
 
   return (
     <div>
-      <h1>Currency Converter</h1>
-   <ComboBox currencies={currencies} changeValue={changeValue}></ComboBox>
-     <DenseTable coast={coast} selectedValue={selectedValue} />
+      <h1>Конвертация валют</h1>
+      <ComboBox currencies={currencies} changeValue={changeValue}></ComboBox>
+      <DenseTable coast={coast} selectedValue={selectedValue} />
     </div>
   );
 }

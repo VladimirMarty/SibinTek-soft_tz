@@ -3,8 +3,11 @@ import CurrencyConverter from "../components/CurrencyConverter";
 import ErrorBoundary from "../components/Error";
 
 function App() {
-    return ( <
-        ErrorBoundary > <
+    return (
+
+        <
+        ErrorBoundary >
+        <
         CurrencyConverter / >
         <
         /ErrorBoundary>

@@ -19,8 +19,8 @@ export default class ErrorBoundary extends React.Component {
        
         return (
           <div>
-            <alert>ikjuhygtfrvgyhujy6tfr</alert>
-            <h2>Something went wrong.</h2>
+        
+            <h2>Конвертация заболела, приходите позже &#129298;</h2>
             <details style={{ whiteSpace: 'pre-wrap' }}>
               {this.state.error && this.state.error.toString()}
               <br />

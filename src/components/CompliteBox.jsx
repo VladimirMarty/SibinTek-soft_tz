@@ -3,8 +3,10 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { RUB_LABEL } from "../utils";
 
+
 export default function ComboBox({ ...props }) {
   return (
+ 
     <Autocomplete
       disablePortal
       id="combo-box-demo"
@@ -14,5 +16,6 @@ export default function ComboBox({ ...props }) {
       sx={{ width: 300 }}
       renderInput={(params) => <TextField {...params} label="Базовая валюта" />}
     />
+   
   );
 }
