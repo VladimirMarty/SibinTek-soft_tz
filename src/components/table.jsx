@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useEffect, useState } from "react";
-import { RUB } from "./utils";
+import { RUB } from "../utils";
 
 export default function DenseTable({ ...props }) {
   const [rows, setRows] = useState([]);
@@ -40,13 +40,13 @@ export default function DenseTable({ ...props }) {
   const calculateRate = (rowData) => {
     if (rowData && currentRate) {
       return (
-        Number(rowData.Nominal) /((Number(currentRate.Value) * Number(rowData.Nominal)) /
-        (Number(rowData.Value) * Number(currentRate.Nominal)))
+        Number(rowData.Nominal) /
+        ((Number(currentRate.Value) * Number(rowData.Nominal)) /
+          (Number(rowData.Value) * Number(currentRate.Nominal)))
       ).toFixed(4);
     }
     return "";
   };
- 
 
   return (
     <TableContainer component={Paper}>

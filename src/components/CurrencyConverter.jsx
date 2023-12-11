@@ -3,15 +3,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ComboBox from "./CompliteBox";
 import DenseTable from "./table";
-import { src, RUB, RUB_LABEL } from "./utils";
+import { src, RUB, RUB_LABEL } from "../utils";
 
 
 function CurrencyConverter() {
-  
   const [coast, setCoast] = useState([]);
   const [selectedValue, setSelectedValue] = useState(RUB_LABEL);
   const [currencies, setCurrencies] = useState([]);
-
 
   useEffect(() => {
     axios.get(src).then((data) => {
@@ -30,15 +28,13 @@ function CurrencyConverter() {
   const changeValue = (value) => {
     setSelectedValue(value);
   };
- 
+
   return (
-  
     <div>
       <h1>Currency Converter</h1>
-      <ComboBox currencies={currencies} changeValue={changeValue}></ComboBox>
-      <DenseTable coast={coast} selectedValue={selectedValue} />
+   <ComboBox currencies={currencies} changeValue={changeValue}></ComboBox>
+     <DenseTable coast={coast} selectedValue={selectedValue} />
     </div>
-   
   );
 }
 

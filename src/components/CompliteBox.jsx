@@ -1,7 +1,7 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import { RUB_LABEL } from "./utils";
+import { RUB_LABEL } from "../utils";
 
 export default function ComboBox({ ...props }) {
   return (
